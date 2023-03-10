@@ -21,6 +21,4 @@ class Dice:
     
     # Assign random int value to a non-public value attribute.
     def roll(self):
-        new_value = random.randint(1, 6)
-        self._value = new_value
-        return new_value
+        self._value = random.randint(1, 6) 

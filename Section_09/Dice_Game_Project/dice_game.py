@@ -25,19 +25,20 @@ class DiceGame:
         
         # Roll the dice
         # Player rolling the dice...
-        player_value = self._player.roll_dice()
+        self._player.roll_dice()
         # Computer rolling the dice
-        computer_value = self._computer.roll_dice()
+        self._computer.roll_dice()
         
         # Show the values of dice rolling
-        self._show_dice(player_value, computer_value)
+        self._show_dice(self._player._dice._value, 
+                        self._computer._dice._value)
         
         # Determine winner and loser
-        if player_value > computer_value:
+        if self._player._dice._value > self._computer._dice._value:
             print("🎉🎉🎉 You won the round! 🎉🎉🎉")
             self._update_counters(winner=self._player, 
                                  loser=self._computer)
-        elif computer_value > player_value:
+        elif self._computer._dice._value > self._player._dice._value:
             print("😿😿😿 The computer won this round. Try again. 😿😿😿")
             self._update_counters(winner=self._computer,
                                  loser=self._player)
