@@ -1,4 +1,6 @@
 from node import Node
+from linked_list import LinkedList
+
 
 # node_1 -> node_2 - node 1 points to node 2
 # node_2 = Node(3)
@@ -38,9 +40,6 @@ from node import Node
 # print(node_a.next.next.value)
 # print(node_a.next.next.next.value)
 
-from linked_list import LinkedList
-
-
 my_linked_list = LinkedList()
 
 my_linked_list.insert_node(9)
@@ -49,3 +48,7 @@ my_linked_list.insert_node(6)
 my_linked_list.insert_node(15)
 
 my_linked_list.print_list_items()
+print(my_linked_list.count_nodes())
+
+my_linked_list.insert_node(0)
+print(my_linked_list.count_nodes())
