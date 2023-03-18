@@ -14,3 +14,13 @@ class LinkedList:
         elif value <= self.head.value:
             new_node.next = self.head
             self.head = new_node
+        else:
+            previous = self.head
+            runner = self.head.next
+            
+            while (runner is not None) and (value > runner.value):
+                previous = runner
+                runner = runner.next
+                
+            new_node.next = runner
+            previous.next = new_node
