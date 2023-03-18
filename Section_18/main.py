@@ -48,7 +48,4 @@ my_linked_list.insert_node(3)
 my_linked_list.insert_node(6)
 my_linked_list.insert_node(15)
 
-print(my_linked_list.head.value)
-print(my_linked_list.head.next.value)
-print(my_linked_list.head.next.next.value)
-print(my_linked_list.head.next.next.next.value)
+my_linked_list.print_list_items()
