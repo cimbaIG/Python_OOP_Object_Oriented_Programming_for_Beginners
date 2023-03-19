@@ -73,4 +73,19 @@ class LinkedList:
         elif self.head.value == target_value:
             self.head = self.head.next
             return True
-    
+        else:
+            previous = self.head
+            runner = self.head.next
+            
+            while (runner is not None) and (target_value > runner.value):
+                previous = runner
+                runner = runner.next
+                
+            if (runner is not None) and (runner.value == target_value):
+                # Bridge that skips the node we want to delete - previous node 
+                # will now point to the node that comes right after the runner 
+                # node.
+                previous.next = runner.next
+                return True
+            else:
+                return False

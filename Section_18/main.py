@@ -60,8 +60,10 @@ print(my_linked_list.count_nodes())
 print(my_linked_list.find_node(3))
 print(my_linked_list.find_node(11))
 
-# Delete head node
+# Delete head node from the linked list
 my_linked_list.delete_node(0)
 my_linked_list.print_list_items()
 
-# Delete node in the middle of a linked list
+# Delete node from the middle of a linked list
+my_linked_list.delete_node(9)
+my_linked_list.print_list_items()
