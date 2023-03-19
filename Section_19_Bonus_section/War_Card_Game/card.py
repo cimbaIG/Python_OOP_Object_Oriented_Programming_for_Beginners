@@ -29,10 +29,10 @@ class Card:
     
     def show(self):
         if self._is_special():
-            print(f"Card value: {Card.special_cards[self.value]}\n"
-                  + f"Card suit: {self.suit.description.capitalize()}" 
+            print(f"{Card.special_cards[self.value]} "
+                  + f"of {self.suit.description}" 
                   + f" {self.suit.symbol}")
         else:
-            print(f"Card value: {self.value}\n"
-                  + f"Card suit: {self.suit.description.capitalize()}" 
+            print(f"{self.value} "
+                  + f"of {self.suit.description}" 
                   + f" {self.suit.symbol}")
