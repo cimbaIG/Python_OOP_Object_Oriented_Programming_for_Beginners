@@ -1,6 +1,8 @@
 from card import Card
 from suit import Suit
 
+import random
+
 
 class Deck:
     
@@ -25,7 +27,7 @@ class Deck:
             card.show()
     
     def shuffle(self):
-        pass
+        random.shuffle(self._cards)
     
     def draw(self):
         pass
