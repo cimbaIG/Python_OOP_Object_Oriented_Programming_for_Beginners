@@ -67,3 +67,10 @@ class LinkedList:
         
         return False
     
+    def delete_node(self, target_value):
+        if self.head is None:
+            return False
+        elif self.head.value == target_value:
+            self.head = self.head.next
+            return True
+    
