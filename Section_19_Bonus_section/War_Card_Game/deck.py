@@ -30,7 +30,7 @@ class Deck:
         random.shuffle(self._cards)
     
     def draw(self):
-        pass
+        return self._cards.pop()
     
     def add(self):
         pass
