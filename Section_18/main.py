@@ -60,6 +60,9 @@ print(my_linked_list.count_nodes())
 print(my_linked_list.find_node(3))
 print(my_linked_list.find_node(11))
 
+# Print node values in the linked list in reversed order
+my_linked_list.print_reversed()
+
 # Delete head node from the linked list
 my_linked_list.delete_node(0)
 my_linked_list.print_list_items()
