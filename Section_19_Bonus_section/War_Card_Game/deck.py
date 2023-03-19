@@ -6,24 +6,18 @@ import random
 
 class Deck:
     
-    def __init__(self, cards=None):
-        if cards is None:
-            self._cards = []
-        else:
-            self._cards = cards
-        self._size = len(self._cards)
+    def __init__(self, is_empty=False):
+        self._cards = []
+        if not is_empty:
+             self.build()
         
     @property
     def size(self):
-        return self._size
-    
-    @property
-    def cards(self):
-        return self._cards
+        return len(self._cards)
     
     def build(self):
         for value in range(2, 15):
-            for suit in Suit.suits.keys():
+            for suit in Suit.SUITS.keys():
                 self._cards.append(Card(suit=Suit(suit), value=value))
     
     def show(self):

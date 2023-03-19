@@ -18,7 +18,7 @@ class Player:
         return self._is_computer
     
     def has_empty_deck(self):
-        if len(self._deck.cards) == 0:
+        if self._deck.size == 0:
             return True
         return False
     
