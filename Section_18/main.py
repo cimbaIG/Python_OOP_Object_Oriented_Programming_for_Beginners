@@ -46,9 +46,16 @@ my_linked_list.insert_node(9)
 my_linked_list.insert_node(3)
 my_linked_list.insert_node(6)
 my_linked_list.insert_node(15)
-
-my_linked_list.print_list_items()
 print(my_linked_list.count_nodes())
 
 my_linked_list.insert_node(0)
+my_linked_list.print_list_items()
 print(my_linked_list.count_nodes())
+
+# my_linked_list: 0 -> 3 -> 6 -> 9 -> 15
+# Node with value 0 points to node with value 3, that points to node with value
+# 6, that points to node with value 9, that points to node with value 15, that 
+# points to node equal to None (there are no more nodes inside the list)!
+
+print(my_linked_list.find_node(3))
+print(my_linked_list.find_node(11))
