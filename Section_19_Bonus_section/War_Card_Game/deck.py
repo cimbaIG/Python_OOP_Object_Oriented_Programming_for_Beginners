@@ -17,6 +17,10 @@ class Deck:
     def size(self):
         return self._size
     
+    @property
+    def cards(self):
+        return self._cards
+    
     def build(self):
         for value in range(2, 15):
             for suit in Suit.suits.keys():
