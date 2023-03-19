@@ -32,5 +32,5 @@ class Deck:
     def draw(self):
         return self._cards.pop()
     
-    def add(self):
-        pass
+    def add(self, card: Card):
+        self._cards.insert(0, card)
