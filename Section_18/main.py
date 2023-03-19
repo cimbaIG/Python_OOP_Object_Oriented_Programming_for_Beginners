@@ -67,3 +67,7 @@ my_linked_list.print_list_items()
 # Delete node from the middle of a linked list
 my_linked_list.delete_node(9)
 my_linked_list.print_list_items()
+
+# Delete node from the end of a linked list
+my_linked_list.delete_node(15)
+my_linked_list.print_list_items()
