@@ -3,7 +3,7 @@ from suit import Suit
 
 class Card:
     
-    special_cards = {
+    SPECIAL_CARDS = {
         11: "Jack",
         12: "Queen",
         13: "King",
@@ -29,7 +29,7 @@ class Card:
     
     def show(self):
         if self._is_special():
-            print(f"{Card.special_cards[self.value]} "
+            print(f"{Card.SPECIAL_CARDS[self.value]} "
                   + f"of {self.suit.description}" 
                   + f" {self.suit.symbol}")
         else:

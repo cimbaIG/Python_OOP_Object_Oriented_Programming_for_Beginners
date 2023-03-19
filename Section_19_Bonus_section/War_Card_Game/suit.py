@@ -1,6 +1,6 @@
 class Suit:
     
-    suits = {
+    SUITS = {
         "clubs": "♣",
         "diamonds": "♦",
         "hearts": "♥",
@@ -10,7 +10,7 @@ class Suit:
     def __init__(self, description: str):
         self._description = description.lower()
         try:
-            self._symbol = Suit.suits[self._description]
+            self._symbol = Suit.SUITS[self._description]
         except KeyError:
             print("Legit suits are: clubs, diamonds, hearts and spades.")
         
