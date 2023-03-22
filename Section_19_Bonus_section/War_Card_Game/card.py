@@ -34,5 +34,5 @@ class Card:
                   + f" {self.suit.symbol}")
         else:
             print(f"{self.value} "
-                  + f"of {self.suit.description}" 
+                  + f"of {self.suit.description}"
                   + f" {self.suit.symbol}")

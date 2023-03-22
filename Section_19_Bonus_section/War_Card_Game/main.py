@@ -1,25 +1,27 @@
-from suit import Suit
-from card import Card
 from deck import Deck
 from player import Player
+from war_card_game import WarCardGame
 
 
-# Testing Suit class
-my_suit = Suit("spades")
-# print(my_suit.description, my_suit.symbol)
+player = Player(name="Mihael",
+                deck=Deck(is_empty=True))
+computer = Player(name="Computer",
+                  deck=Deck(is_empty=True),
+                  is_computer=True)
+deck = Deck()
 
-my_card = Card(suit=my_suit, value=12)
-# my_card.show()
+game = WarCardGame(player=player,
+                   computer=computer,
+                   deck=deck)
 
-my_deck = Deck()
-# my_deck.show()
-# my_deck.shuffle()
-# my_deck.show()
-# print(my_deck.size)
-# my_deck.draw().show()
-# my_deck.show()
+game.print_welcome_message()
 
-# player = Player("Michael", my_deck)
-# print(player.has_empty_deck())
-# player.draw_card().show()
-# player.add_card(my_card)
+while not game.is_game_over():
+    game.play()
+    game.print_statistics()
+    
+    next_round = input("\nDo you want to start next round?\nPress Enter to"
+        + " start new round or press X to stop playing the game!")
+    
+    if next_round.lower() == "x":
+        break
